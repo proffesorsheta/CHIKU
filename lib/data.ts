@@ -126,14 +126,14 @@ export const memories = [
 ];
 
 export const spinWheelItems = [
-  { label: "A Sweet Kiss", emoji: "\u{1F48B}" },
-  { label: "Big Warm Hug", emoji: "\u{1F917}" },
-  { label: "Movie Date Night", emoji: "\u{1F3AC}" },
-  { label: "Chocolate Treat", emoji: "\u{1F36B}" },
-  { label: "Surprise Gift", emoji: "\u{1F381}" },
-  { label: "Love Letter", emoji: "\u{1F48C}" },
-  { label: "Cook Together", emoji: "\u{1F373}" },
-  { label: "Slow Dance", emoji: "\u{1F483}" },
+  { label: "A Sweet Kiss", emoji: "\u{1F48B}", description: "Pucker up! Time for the sweetest kiss ever." },
+  { label: "Big Warm Hug", emoji: "\u{1F917}", description: "Drop everything and give the tightest hug right now!" },
+  { label: "Movie Date Night", emoji: "\u{1F3AC}", description: "Grab the popcorn, pick a movie, and cuddle up together!" },
+  { label: "Chocolate Treat", emoji: "\u{1F36B}", description: "You owe someone their favorite chocolate treat today!" },
+  { label: "Surprise Gift", emoji: "\u{1F381}", description: "Plan a little surprise gift, big or small, it is the thought that counts!" },
+  { label: "Love Letter", emoji: "\u{1F48C}", description: "Write a short love note and hide it somewhere special!" },
+  { label: "Cook Together", emoji: "\u{1F373}", description: "Get into the kitchen and cook your favorite meal together!" },
+  { label: "Slow Dance", emoji: "\u{1F483}", description: "Play your song, hold each other close, and slow dance!" },
 ];
 
 export const letters = [

@@ -95,7 +95,7 @@ export default function FinalPage() {
     fireConfetti();
     try {
       if (audioRef.current) {
-        audioRef.current.play().catch(() => {});
+        audioRef.current.play().catch(() => { });
         setMusicPlaying(true);
       }
     } catch {
@@ -109,7 +109,7 @@ export default function FinalPage() {
       audioRef.current.pause();
       setMusicPlaying(false);
     } else {
-      audioRef.current.play().catch(() => {});
+      audioRef.current.play().catch(() => { });
       setMusicPlaying(true);
     }
   };
@@ -372,7 +372,7 @@ export default function FinalPage() {
               </div>
               <div className="p-5 text-center">
                 <p className="font-serif text-lg font-bold text-foreground mb-1">
-                  Our J-hope
+                  J-hope
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Because every love story needs a little hope and sunshine
