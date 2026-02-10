@@ -2,7 +2,7 @@ export const quizQuestions = [
   {
     question: "What was the first thing you noticed about me?",
     options: ["Your smile", "Your eyes", "Your laugh", "Your kindness"],
-    answer: 0,
+    correctAnswers: [0], // Your smile
   },
   {
     question: "What is our favorite thing to do together?",
@@ -12,7 +12,7 @@ export const quizQuestions = [
       "Go for walks",
       "Just talk for hours",
     ],
-    answer: 3,
+    correctAnswers: [1], // Cook together
   },
   {
     question: "What song reminds you of us?",
@@ -22,12 +22,12 @@ export const quizQuestions = [
       "A Thousand Years",
       "Can't Help Falling in Love",
     ],
-    answer: 1,
+    correctAnswers: [0], // Perfect by Ed Sheeran
   },
   {
     question: "Where would you love to travel with me?",
     options: ["Paris", "Maldives", "Tokyo", "Santorini"],
-    answer: 0,
+    correctAnswers: [0], // Paris
   },
   {
     question: "What do you love most about us?",
@@ -37,7 +37,7 @@ export const quizQuestions = [
       "We support each other no matter what",
       "All of the above",
     ],
-    answer: 3,
+    correctAnswers: [2, 3], // both accepted
   },
   {
     question: "How do you know I love you?",
@@ -47,7 +47,7 @@ export const quizQuestions = [
       "I tell you every day",
       "You just feel it",
     ],
-    answer: 3,
+    correctAnswers: [1], // The little things I do
   },
   {
     question: "What is the best gift I could give you?",
@@ -57,7 +57,7 @@ export const quizQuestions = [
       "My time and attention",
       "A big warm hug",
     ],
-    answer: 2,
+    correctAnswers: [2, 3], // both accepted
   },
   {
     question: "What do I do when you are upset?",
@@ -67,7 +67,7 @@ export const quizQuestions = [
       "Crack jokes until you smile",
       "Bring you your favorite snack",
     ],
-    answer: 1,
+    correctAnswers: [1], // Hug you tight and listen
   },
   {
     question: "What is my love language?",
@@ -77,12 +77,12 @@ export const quizQuestions = [
       "Quality time",
       "Acts of service",
     ],
-    answer: 2,
+    correctAnswers: [2], // Quality time
   },
   {
     question: "What would I name our future pet?",
     options: ["Mochi", "Cookie", "Bruno", "Oreo"],
-    answer: 0,
+    correctAnswers: [3], // Oreo
   },
 ];
 

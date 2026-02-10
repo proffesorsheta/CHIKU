@@ -2,9 +2,20 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
-import { Heart, Volume2, VolumeX, Home, Lock, ArrowRight } from "lucide-react";
+import {
+  Heart,
+  Volume2,
+  VolumeX,
+  Home,
+  Lock,
+  ArrowRight,
+  Check,
+  X,
+  Sparkles,
+} from "lucide-react";
 import confetti from "canvas-confetti";
 import { cn } from "@/lib/utils";
+import { quizQuestions } from "@/lib/data";
 
 const slides = [
   {
@@ -31,7 +42,9 @@ const slides = [
 
 export default function FinalPage() {
   const [passed, setPassed] = useState<boolean | null>(null);
+  const [savedAnswers, setSavedAnswers] = useState<Record<number, number>>({});
   const [revealed, setRevealed] = useState(false);
+  const [showAnswers, setShowAnswers] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [musicPlaying, setMusicPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -39,7 +52,11 @@ export default function FinalPage() {
   useEffect(() => {
     try {
       const savedPassed = localStorage.getItem("loveQuizPassed");
+      const answers = localStorage.getItem("loveQuizAnswers");
       setPassed(savedPassed === "true");
+      if (answers) {
+        setSavedAnswers(JSON.parse(answers));
+      }
     } catch {
       setPassed(false);
     }
@@ -75,7 +92,6 @@ export default function FinalPage() {
   const handleReveal = () => {
     setRevealed(true);
     fireConfetti();
-    // autoplay music
     try {
       if (audioRef.current) {
         audioRef.current.play().catch(() => {});
@@ -97,15 +113,11 @@ export default function FinalPage() {
     }
   };
 
-  const nextSlide = () => {
+  const nextSlide = () =>
     setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
+  const prevSlide = () =>
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
 
-  // Auto-advance slideshow
   useEffect(() => {
     if (!revealed) return;
     const interval = setInterval(() => {
@@ -114,7 +126,7 @@ export default function FinalPage() {
     return () => clearInterval(interval);
   }, [revealed]);
 
-  // Loading state
+  // Loading
   if (passed === null) {
     return (
       <section className="min-h-[calc(100vh-4rem)] flex items-center justify-center">
@@ -123,7 +135,7 @@ export default function FinalPage() {
     );
   }
 
-  // Locked state
+  // Locked
   if (!passed) {
     return (
       <section className="min-h-[calc(100vh-4rem)] flex items-center justify-center px-4">
@@ -134,8 +146,8 @@ export default function FinalPage() {
               This Page is Locked
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              You need to pass the love quiz first! Take the quiz and wait for
-              the magic to happen.
+              You need to get at least 9 out of 10 correct on the love quiz to
+              unlock this surprise!
             </p>
             <Link
               href="/quiz"
@@ -152,7 +164,6 @@ export default function FinalPage() {
 
   return (
     <section className="min-h-[calc(100vh-4rem)] flex items-center justify-center px-4 py-12 relative overflow-hidden">
-      {/* Background K-pop music - using a royalty-free romantic tune URL */}
       <audio
         ref={audioRef}
         loop
@@ -205,12 +216,9 @@ export default function FinalPage() {
             <div className="bg-card rounded-3xl shadow-2xl border border-border overflow-hidden mb-6">
               <div className="relative">
                 <div className="bg-gradient-to-br from-primary/20 via-accent/10 to-secondary h-52 flex items-center justify-center">
-                  <Heart
-                    className="w-20 h-20 text-primary/30 fill-primary/20 animate-pulse-heart"
-                  />
+                  <Heart className="w-20 h-20 text-primary/30 fill-primary/20 animate-pulse-heart" />
                 </div>
 
-                {/* Slide content */}
                 <div className="p-6 md:p-8">
                   <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">
                     {currentSlide + 1} / {slides.length}
@@ -223,7 +231,6 @@ export default function FinalPage() {
                   </p>
                 </div>
 
-                {/* Slide navigation */}
                 <div className="flex items-center justify-between px-6 pb-6">
                   <button
                     type="button"
@@ -270,6 +277,85 @@ export default function FinalPage() {
                 moment. I choose you, today and always. This is just the
                 beginning of our beautiful story.
               </p>
+            </div>
+
+            {/* Toggle answers section */}
+            <div className="mb-6">
+              <button
+                type="button"
+                onClick={() => setShowAnswers((prev) => !prev)}
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-card border border-border rounded-2xl font-semibold text-foreground shadow-sm hover:shadow-md transition-all"
+              >
+                <Sparkles className="w-4 h-4 text-primary" />
+                {showAnswers ? "Hide Our Answers" : "See All Our Answers"}
+              </button>
+
+              {showAnswers && (
+                <div className="mt-4 flex flex-col gap-3 animate-fade-in-up">
+                  {quizQuestions.map((q, i) => {
+                    const userAnswer = savedAnswers[i];
+                    const isCorrect =
+                      userAnswer !== undefined &&
+                      q.correctAnswers.includes(userAnswer);
+                    const userAnswerText =
+                      userAnswer !== undefined
+                        ? q.options[userAnswer]
+                        : "Not answered";
+                    const correctText = q.correctAnswers
+                      .map((idx) => q.options[idx])
+                      .join(" or ");
+
+                    return (
+                      <div
+                        key={i}
+                        className={cn(
+                          "bg-card rounded-2xl border p-4 transition-all",
+                          isCorrect
+                            ? "border-green-200 bg-green-50/50"
+                            : "border-red-200 bg-red-50/50"
+                        )}
+                      >
+                        <div className="flex items-start gap-3">
+                          <div
+                            className={cn(
+                              "flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center mt-0.5",
+                              isCorrect
+                                ? "bg-green-100 text-green-600"
+                                : "bg-red-100 text-red-500"
+                            )}
+                          >
+                            {isCorrect ? (
+                              <Check className="w-4 h-4" />
+                            ) : (
+                              <X className="w-4 h-4" />
+                            )}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-semibold text-foreground mb-1">
+                              Q{i + 1}. {q.question}
+                            </p>
+                            <p
+                              className={cn(
+                                "text-sm font-medium",
+                                isCorrect
+                                  ? "text-green-700"
+                                  : "text-red-600"
+                              )}
+                            >
+                              Your answer: {userAnswerText}
+                            </p>
+                            {!isCorrect && (
+                              <p className="text-sm text-green-600 mt-0.5">
+                                Correct: {correctText}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
 
             {/* Actions */}
