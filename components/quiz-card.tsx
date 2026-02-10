@@ -8,6 +8,7 @@ interface QuizCardProps {
   questionNumber: number;
   totalQuestions: number;
   selectedAnswer: number | null;
+  locked: boolean;
   onSelect: (index: number) => void;
 }
 
@@ -17,10 +18,9 @@ export function QuizCard({
   questionNumber,
   totalQuestions,
   selectedAnswer,
+  locked,
   onSelect,
 }: QuizCardProps) {
-  const answered = selectedAnswer !== null;
-
   return (
     <div className="w-full max-w-lg mx-auto animate-fade-in-up">
       <div className="bg-card rounded-3xl shadow-lg border border-border p-6 md:p-8">
@@ -53,13 +53,13 @@ export function QuizCard({
               <button
                 key={index}
                 type="button"
-                disabled={answered}
+                disabled={locked}
                 onClick={() => onSelect(index)}
                 className={cn(
                   "w-full text-left px-5 py-4 rounded-2xl border-2 font-medium transition-all duration-200",
                   isSelected
                     ? "border-primary bg-primary/10 text-foreground ring-2 ring-primary/30"
-                    : answered
+                    : locked
                       ? "border-border bg-muted/30 opacity-50"
                       : "border-border bg-muted/50 hover:bg-muted hover:border-primary/40 cursor-pointer active:scale-[0.98]"
                 )}

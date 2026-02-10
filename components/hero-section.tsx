@@ -7,7 +7,10 @@ export function HeroSection() {
   return (
     <section className="min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center px-4 text-center">
       {/* Floating hearts background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+      <div
+        className="absolute inset-0 overflow-hidden pointer-events-none"
+        aria-hidden="true"
+      >
         {[...Array(6)].map((_, i) => (
           <Heart
             key={i}
@@ -39,7 +42,7 @@ export function HeroSection() {
             className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
           >
             <Heart className="w-5 h-5 fill-primary-foreground" />
-            Begin Our Story
+            Start the Quiz
           </Link>
         </div>
 
@@ -50,7 +53,7 @@ export function HeroSection() {
           {[
             { label: "Love Quiz", href: "/quiz", icon: "?" },
             { label: "Memories", href: "/memories", icon: "\u2661" },
-            { label: "Spin Wheel", href: "/spin", icon: "\u2740" },
+            { label: "Letters", href: "/letters", icon: "\u2709" },
             { label: "Forever", href: "/final", icon: "\u221E" },
           ].map((item) => (
             <Link
@@ -58,7 +61,9 @@ export function HeroSection() {
               href={item.href}
               className="flex flex-col items-center gap-2 p-4 rounded-2xl bg-card border border-border shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
             >
-              <span className="text-2xl" aria-hidden="true">{item.icon}</span>
+              <span className="text-2xl" aria-hidden="true">
+                {item.icon}
+              </span>
               <span className="text-sm font-medium text-foreground">
                 {item.label}
               </span>
