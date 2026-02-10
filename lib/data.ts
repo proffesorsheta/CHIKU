@@ -59,6 +59,31 @@ export const quizQuestions = [
     ],
     answer: 2,
   },
+  {
+    question: "What do I do when you are upset?",
+    options: [
+      "Give you space",
+      "Hug you tight and listen",
+      "Crack jokes until you smile",
+      "Bring you your favorite snack",
+    ],
+    answer: 1,
+  },
+  {
+    question: "What is my love language?",
+    options: [
+      "Words of affirmation",
+      "Physical touch",
+      "Quality time",
+      "Acts of service",
+    ],
+    answer: 2,
+  },
+  {
+    question: "What would I name our future pet?",
+    options: ["Mochi", "Cookie", "Bruno", "Oreo"],
+    answer: 0,
+  },
 ];
 
 export const memories = [
@@ -100,27 +125,15 @@ export const memories = [
   },
 ];
 
-export const reasons = [
-  "Because your smile lights up my entire world.",
-  "Because you make even the boring days feel exciting.",
-  "Because you believe in me when I forget to believe in myself.",
-  "Because your laugh is my favorite sound in the universe.",
-  "Because you always know exactly what to say.",
-  "Because you make me want to be a better person every day.",
-  "Because your hugs feel like coming home.",
-  "Because you remember the little things that matter.",
-  "Because you never give up on us.",
-  "Because you love me even at my worst.",
-  "Because every moment with you feels like a gift.",
-  "Because you make my heart skip a beat, still.",
-  "Because you are my best friend and my greatest love.",
-  "Because you turn ordinary moments into memories.",
-  "Because your kindness inspires everyone around you.",
-  "Because you make me laugh until my stomach hurts.",
-  "Because you are the first person I want to tell good news to.",
-  "Because life just makes more sense with you in it.",
-  "Because you accept me completely, flaws and all.",
-  "Because I simply cannot imagine my life without you.",
+export const spinWheelItems = [
+  { label: "A Sweet Kiss", emoji: "\u{1F48B}" },
+  { label: "Big Warm Hug", emoji: "\u{1F917}" },
+  { label: "Movie Date Night", emoji: "\u{1F3AC}" },
+  { label: "Chocolate Treat", emoji: "\u{1F36B}" },
+  { label: "Surprise Gift", emoji: "\u{1F381}" },
+  { label: "Love Letter", emoji: "\u{1F48C}" },
+  { label: "Cook Together", emoji: "\u{1F373}" },
+  { label: "Slow Dance", emoji: "\u{1F483}" },
 ];
 
 export const letters = [

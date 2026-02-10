@@ -125,7 +125,7 @@ export default function FinalPage() {
               className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-primary-foreground rounded-full text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <Heart className="w-5 h-5 fill-primary-foreground" />
-              Will you always choose me?
+              Forever with you
             </button>
           ) : (
             <div className="animate-fade-in-up">

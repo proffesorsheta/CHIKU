@@ -8,7 +8,6 @@ interface QuizCardProps {
   questionNumber: number;
   totalQuestions: number;
   selectedAnswer: number | null;
-  correctAnswer: number;
   onSelect: (index: number) => void;
 }
 
@@ -18,7 +17,6 @@ export function QuizCard({
   questionNumber,
   totalQuestions,
   selectedAnswer,
-  correctAnswer,
   onSelect,
 }: QuizCardProps) {
   const answered = selectedAnswer !== null;
@@ -49,16 +47,7 @@ export function QuizCard({
 
         <div className="flex flex-col gap-3">
           {options.map((option, index) => {
-            let style = "border-border bg-muted/50 hover:bg-muted hover:border-primary/40";
-            if (answered) {
-              if (index === correctAnswer) {
-                style = "border-green-400 bg-green-50 text-green-800";
-              } else if (index === selectedAnswer && index !== correctAnswer) {
-                style = "border-red-300 bg-red-50 text-red-700";
-              } else {
-                style = "border-border bg-muted/30 opacity-50";
-              }
-            }
+            const isSelected = index === selectedAnswer;
 
             return (
               <button
@@ -68,8 +57,11 @@ export function QuizCard({
                 onClick={() => onSelect(index)}
                 className={cn(
                   "w-full text-left px-5 py-4 rounded-2xl border-2 font-medium transition-all duration-200",
-                  style,
-                  !answered && "cursor-pointer active:scale-[0.98]"
+                  isSelected
+                    ? "border-primary bg-primary/10 text-foreground ring-2 ring-primary/30"
+                    : answered
+                      ? "border-border bg-muted/30 opacity-50"
+                      : "border-border bg-muted/50 hover:bg-muted hover:border-primary/40 cursor-pointer active:scale-[0.98]"
                 )}
               >
                 {option}

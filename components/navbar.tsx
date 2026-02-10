@@ -10,7 +10,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/quiz", label: "Quiz" },
   { href: "/memories", label: "Memories" },
-  { href: "/reasons", label: "Reasons" },
+  { href: "/spin", label: "Spin" },
   { href: "/letters", label: "Letters" },
   { href: "/bucket", label: "Bucket List" },
   { href: "/final", label: "Forever" },

@@ -50,7 +50,7 @@ export function HeroSection() {
           {[
             { label: "Love Quiz", href: "/quiz", icon: "?" },
             { label: "Memories", href: "/memories", icon: "\u2661" },
-            { label: "Letters", href: "/letters", icon: "\u2709" },
+            { label: "Spin Wheel", href: "/spin", icon: "\u2740" },
             { label: "Forever", href: "/final", icon: "\u221E" },
           ].map((item) => (
             <Link

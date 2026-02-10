@@ -33,10 +33,10 @@ export default function MemoriesPage() {
 
         <div className="text-center mt-12">
           <Link
-            href="/reasons"
+            href="/spin"
             className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground rounded-full font-semibold shadow-md hover:shadow-lg transition-all hover:scale-105"
           >
-            Why I Love You
+            Spin the Love Wheel
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
