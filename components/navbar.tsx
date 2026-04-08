@@ -27,8 +27,8 @@ export function Navbar() {
           href="/"
           className="flex items-center gap-2 text-primary font-serif text-xl font-bold"
         >
-          <Heart className="w-5 h-5 fill-primary" />
-          <span>Our Love</span>
+          <span className="text-2xl">🎂</span>
+          <span>Birthday Love</span>
         </Link>
 
         {/* Desktop nav */}

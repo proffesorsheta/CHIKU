@@ -76,6 +76,16 @@
   70% { transform: scale(1); }
 }
 
+@keyframes bounce-confetti {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
@@ -90,4 +100,12 @@
 
 .animate-heartbeat {
   animation: heartBeat 1.2s ease-in-out;
+}
+
+.animate-bounce-confetti {
+  animation: bounce-confetti 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
 }

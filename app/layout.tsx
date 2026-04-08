@@ -18,9 +18,9 @@ const quicksand = Quicksand({
 });
 
 export const metadata: Metadata = {
-  title: "Our Love Story",
+  title: "Happy Birthday - Our Love Story",
   description:
-    "A romantic interactive love portfolio game to celebrate our love.",
+    "A special birthday celebration of our love with a romantic interactive experience.",
 };
 
 export const viewport: Viewport = {

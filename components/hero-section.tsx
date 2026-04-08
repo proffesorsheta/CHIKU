@@ -29,13 +29,20 @@ export function HeroSection() {
 
       <div className="relative z-10 max-w-2xl mx-auto">
         <div className="animate-fade-in-up">
-          <Heart className="w-16 h-16 mx-auto mb-6 text-primary fill-primary animate-pulse-heart" />
-          <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground mb-4 text-balance">
-            Our Love Story
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <span className="text-4xl">🎉</span>
+            <Heart className="w-16 h-16 text-primary fill-primary animate-pulse-heart" />
+            <span className="text-4xl">🎂</span>
+          </div>
+          <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground mb-2 text-balance">
+            Happy Birthday
           </h1>
+          <p className="text-2xl md:text-3xl text-primary font-semibold mb-6 text-balance">
+            Our Love Story
+          </p>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed text-pretty">
-            A little journey through our most beautiful moments, the reasons I
-            adore you, and all the dreams we share together.
+            A special birthday celebration of our most beautiful moments, the reasons I
+            adore you, and all the dreams we share together. You deserve all the love and joy in this world.
           </p>
           <Link
             href="/quiz"
