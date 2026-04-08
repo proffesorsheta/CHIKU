@@ -87,42 +87,44 @@ export const quizQuestions = [
 ];
 
 export const memories = [
-  {
-    title: "Our First Date",
-    description:
-      "The butterflies, the nervous laughs, and the moment I knew this was something special. Every second felt like magic.",
-    color: "bg-primary/10",
-  },
-  {
-    title: "Late Night Talks",
-    description:
-      "Those 3 AM conversations where we shared our deepest dreams and fears. The world was quiet, but our hearts were loud.",
-    color: "bg-accent/10",
-  },
-  {
-    title: "Our First Trip",
-    description:
-      "Getting lost together, finding hidden gems, and realizing that home is wherever you are by my side.",
-    color: "bg-secondary",
-  },
-  {
-    title: "Dancing in the Rain",
-    description:
-      "We didn't care who was watching. The rain poured, and we just held each other and danced like nobody else existed.",
-    color: "bg-primary/10",
-  },
-  {
-    title: "Cooking Disaster",
-    description:
-      "Remember when we tried to make pasta and almost burned the kitchen? We laughed so hard we cried. Best meal ever.",
-    color: "bg-accent/10",
-  },
-  {
-    title: "Stargazing Night",
-    description:
-      "Lying on that blanket, counting stars, and making wishes. My only wish was for more nights like that with you.",
-    color: "bg-secondary",
-  },
+  [
+    {
+      title: "Our First Chat",
+      description:
+        "The first 'hello,' the nervous typing, and the moment we just clicked. Every message felt like magic.",
+      color: "bg-primary/10",
+    },
+    // {
+    //   title: "Late Night Calls",
+    //   description:
+    //     "Falling asleep on FaceTime together. The screen was our only bridge, but it felt like you were right there next to me.",
+    //   color: "bg-accent/10",
+    // },
+    {
+      title: "Virtual Dates",
+      description:
+        "Pressing 'play' at the same time and sharing meals over video. Distance didn't stop us from making every moment count.",
+      color: "bg-secondary",
+    },
+    {
+      title: "The Countdown",
+      description:
+        "Checking our flight trackers and counting down the days. The miles between us only made our love grow stronger.",
+      color: "bg-primary/10",
+    },
+    {
+      title: "Package Surprises",
+      description:
+        "Opening a box that smelled like you. A little piece of your world sent to mine, making the distance feel a bit smaller.",
+      color: "bg-accent/10",
+    },
+    // {
+    //   title: "The Airport Run",
+    //   description:
+    //     "That breathless moment of finally seeing you in person. No more screens—just the best hug of my life.",
+    //   color: "bg-secondary",
+    // },
+  ]
 ];
 
 export const spinWheelItems = [
