@@ -38,7 +38,7 @@ export function HeroSection() {
             Happy Birthday
           </h1>
           <p className="text-2xl md:text-3xl text-primary font-semibold mb-6 text-balance">
-            Our Love Story
+            - CHIKUU
           </p>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed text-pretty">
             A special birthday celebration of our most beautiful moments, the reasons I

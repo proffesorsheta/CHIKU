@@ -28,7 +28,7 @@ export function Navbar() {
           className="flex items-center gap-2 text-primary font-serif text-xl font-bold"
         >
           <span className="text-2xl">🎂</span>
-          <span>Birthday Love</span>
+          <span>CHIKU</span>
         </Link>
 
         {/* Desktop nav */}
