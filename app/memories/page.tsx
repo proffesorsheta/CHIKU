@@ -19,7 +19,7 @@ export default function MemoriesPage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {memories.map((memory, index) => (
+          {memories[0].map((memory, index) => (
             <MemoryCard
               key={memory.title}
               title={memory.title}
