@@ -11,11 +11,10 @@ export default function MemoriesPage() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12 animate-fade-in-up">
           <h1 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-3 text-balance">
-            Our Beautiful Memories
+            Our Long-Distance Love
           </h1>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto text-pretty">
-            Every moment with you is a treasure. Tap on a card to relive the
-            memory.
+            Miles apart but hearts together. Every small moment, every message, every call—these are the memories that keep us close.
           </p>
         </div>
 

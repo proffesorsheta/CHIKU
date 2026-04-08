@@ -89,39 +89,39 @@ export const quizQuestions = [
 export const memories = [
   [
     {
-      title: "Our First Chat",
+      title: "Morning 'Good Morning' Texts",
       description:
-        "The first 'hello,' the nervous typing, and the moment we just clicked. Every message felt like magic.",
+        "Starting each day by saying hello to you, even across time zones. A simple message that says 'I was thinking of you first thing.'",
       color: "bg-primary/10",
     },
     {
-      title: "Late Night Calls",
+      title: "Our Late Night Calls",
       description:
-        "Falling asleep on FaceTime together. The screen was our only bridge, but it felt like you were right there next to me.",
+        "Just talking about our day, laughing at silly things, falling asleep listening to your voice. No fancy plans, just us.",
       color: "bg-accent/10",
     },
     {
-      title: "Virtual Dates",
+      title: "Watching Shows Together",
       description:
-        "Pressing 'play' at the same time and sharing meals over video. Distance didn't stop us from making every moment count.",
+        "Starting the same episode at the same time and texting reactions. Sharing laughs even though we're miles apart.",
       color: "bg-secondary",
     },
     {
-      title: "The Countdown",
+      title: "Voice Notes at 2 AM",
       description:
-        "Checking our flight trackers and counting down the days. The miles between us only made our love grow stronger.",
+        "Random voice messages about anything and everything. Your voice is my favorite sound, no matter the time.",
       color: "bg-primary/10",
     },
     {
-      title: "Package Surprises",
+      title: "Small Surprises Arriving",
       description:
-        "Opening a box that smelled like you. A little piece of your world sent to mine, making the distance feel a bit smaller.",
+        "A little package, a handwritten letter, something that reminds me of you. These small gifts mean everything.",
       color: "bg-accent/10",
     },
     {
-      title: "The Airport Run",
+      title: "Making Plans to Visit",
       description:
-        "That breathless moment of finally seeing you in person. No more screens—just the best hug of my life.",
+        "Counting down days, planning what to do, excited texts about the trip. The anticipation is almost as sweet as the visit itself.",
       color: "bg-secondary",
     },
   ]
