@@ -169,7 +169,7 @@ export default function FinalPage() {
         ref={audioRef}
         loop
         preload="auto"
-        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
       />
 
       {/* Floating hearts */}
